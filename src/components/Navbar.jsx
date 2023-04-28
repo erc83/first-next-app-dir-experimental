@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import React from 'react'
 import style from './Navbar.module.css'
+import { ActiveLink } from './ActiveLink'
 
 export const Navbar = () => {
   return (
@@ -13,16 +14,16 @@ export const Navbar = () => {
             <div className="collapse navbar-collapse" id="navbarNav">
             <ul className="navbar-nav" >
                 <li className="nav-item">
-                    <Link className="nav-link active" aria-current="page" href="/">Home</Link>
+                    <ActiveLink text="Home" href="/" />
                 </li>
                 <li className="nav-item">
-                    <Link className="nav-link" href="/about">About</Link>
+                    <ActiveLink text="About" href="/about" />
                 </li>
                 <li className="nav-item">
-                    <Link className="nav-link" href="/dashboard">Dashboard</Link>
+                    <ActiveLink text="Dashboard" href="/dashboard" />
                 </li>
                 <li className="nav-item">
-                    <Link className="nav-link" href="/contact">Contacto</Link>
+                    <ActiveLink text="Contacto" href="/contact" />
                 </li>
             </ul>
             </div>
