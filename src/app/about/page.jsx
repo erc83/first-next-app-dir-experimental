@@ -1,24 +1,19 @@
-import Link from 'next/link'
-import styles from '../page.module.css'
-import Navbar from '@/components/Navbar'
+import { MainLayout } from "@/components/layouts/MainLayouts";
+
 
 export default function About() {
   return (
-    <>
-      <Navbar />
-      <main className={styles.main}>
-
-      <div className={styles.description}>
-
-
-            <Link href="/">
-              Ir a Home
-            </Link>
-     
-        
-      </div>
-      </main>
-    </>
+    <MainLayout>
+       <div className="description">
+          <div>
+            <h1>Hola About</h1>
+          </div>
+          <div>
+            Get started by editing&nbsp;
+            <code className="code">src/app/about/page.jsx</code>
+          </div>
+        </div>
+    </MainLayout>
  
   )
 }

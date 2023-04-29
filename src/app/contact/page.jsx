@@ -1,16 +1,18 @@
-import Navbar from "@/components/Navbar";
-import Link from 'next/link'
-import styles from '../page.module.css'
+import { MainLayout } from "@/components/layouts/MainLayouts";
+
 
 export default function Contact() {
     return (
-        <>
-            <Navbar />
-            <main className={styles.main}>
-                <Link href="/"> 
-                    Contact page
-                </Link>
-            </main>
-        </>
+    <MainLayout>
+       <div className="description">
+          <div>
+            <h1>Hola Contact</h1>
+          </div>
+          <div>
+            Get started by editing&nbsp;
+            <code className="code">src/app/contact/page.jsx</code>
+          </div>
+        </div>
+    </MainLayout>
     )
 }

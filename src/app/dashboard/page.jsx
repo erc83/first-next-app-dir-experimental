@@ -1,21 +1,20 @@
-import Navbar from "@/components/Navbar";
-import Link from "next/link";
-import styles from '../page.module.css'
+import { MainLayout } from "@/components/layouts/MainLayouts";
+
 
 export default function About() {
     return (
-      <>
-      <Navbar />
-        
-        <main className={styles.main}>
-        <div>
-          <h1>Hola Dashboard</h1>
+      <MainLayout>
+       <div className="description">
           <div>
-            <Link href="/">Ir a Home</Link>
+            <h1>Hola Dashboard</h1>
           </div>
+          <div>
+            Get started by editing&nbsp;
+            <code className="code">src/app/dashboard/page.jsx</code>
+          </div>
+       
         </div>
-        </main>
-      </>
+    </MainLayout>
    
     )
   }

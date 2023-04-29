@@ -7,7 +7,7 @@ import Link from "next/link";
 export const ActiveLink = ({ text, href }) => {
     
     const path = usePathname();
-    console.log(path);
+    // console.log(path);
     
     const style = {
         color: '#0070f3',
