@@ -1,7 +1,29 @@
-import Link from 'next/link'
 import React from 'react'
-import style from './Navbar.module.css'
+
 import { ActiveLink } from './ActiveLink'
+
+const menuItem = [
+    {
+        text: 'Home',
+        href: '/'
+    },
+    {
+        text: 'About',
+        href: '/about'
+    },
+    {
+        text: 'Contact',
+        href: '/contact'
+    },
+    {
+        text: 'Dashboard',
+        href: '/dashboard'
+    },
+    {
+        text: 'Pricing',
+        href: '/pricing'
+    },
+]
 
 export const Navbar = () => {
   return (
@@ -12,19 +34,29 @@ export const Navbar = () => {
             <span className="navbar-toggler-icon"></span>
             </button>
             <div className="collapse navbar-collapse" id="navbarNav">
+
             <ul className="navbar-nav" >
-                <li className="nav-item">
-                    <ActiveLink text="Home" href="/" />
-                </li>
-                <li className="nav-item">
-                    <ActiveLink text="About" href="/about" />
-                </li>
-                <li className="nav-item">
-                    <ActiveLink text="Dashboard" href="/dashboard" />
-                </li>
-                <li className="nav-item">
-                    <ActiveLink text="Contacto" href="/contact" />
-                </li>
+               {/*  {
+                    menuItem.map((element) => {
+                        return (<li className="nav-item">
+                            <ActiveLink text={element.text} href={element.href} />
+                        </li>)
+                    })
+                } */}
+                {/* {
+                    menuItem.map((element) => (
+                        <li className="nav-item">
+                            <ActiveLink text={element.text} href={element.href} />
+                        </li>)
+                    )
+                } */}
+                {
+                    menuItem.map(({ text, href }) => (
+                        <li key={ href } className="nav-item">
+                            <ActiveLink  text={ text } href={ href } />
+                        </li>)
+                    )
+                }
             </ul>
             </div>
         </div>

@@ -1,6 +1,5 @@
 import { MainLayout } from "@/components/layouts/MainLayouts";
 
-
 export default function Contact() {
     return (
     <MainLayout>
